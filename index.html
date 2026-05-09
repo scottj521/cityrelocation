@@ -365,7 +365,7 @@ drawPie: function drawPie(id,segs){const c=document.getElementById(id);if(!c)ret
 Colors: White=#38b6f8, Black=#9b7aea, Hispanic=#f97316, Asian=#27c464, Other=#d1ddf0
 Use REAL 2024-2026 data for ${n}. Real Census ACS demographics. Return ONLY HTML starting with <!DOCTYPE html>.`;
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:8000,messages:[{role:'user',content:prompt}]})});
+    const res=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:8000,messages:[{role:'user',content:prompt}]})});
     if(!res.ok)throw new Error('API '+res.status);
     const d=await res.json();
     let html=(d.content?.[0]?.text||'').trim().replace(/^```html\s*/i,'').replace(/\s*```$/,'').trim();
