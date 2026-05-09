@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Georgia — City Relocator</title>
+<meta name="description" content="Best counties and cities in Georgia — QOL grades, rent, crime, schools, demographics for Columbia, Fulton, Clarke, Richmond counties.">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html">🏠 Hub</a>
+  <span class="nav-sep">›</span>
+  <span class="nav-cur">🍑 Georgia</span>
+  <div class="nav-right"><a href="south-carolina.html">South Carolina →</a></div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-flag">🍑</div>
+    <div class="hero-text">
+      <h1>Georgia — Best Counties &amp; Cities 2026</h1>
+      <p>County-level grades with city breakdowns — QOL scores, rent, home prices, crime, schools, and Census demographics with pie charts for every city.</p>
+      <div class="hero-pills">
+        <span class="hero-pill">6 Counties</span>
+        <span class="hero-pill">9 Cities</span>
+        <span class="hero-pill">A+–C+ Grades</span>
+        <span class="hero-pill">Teacher + Remote Worker Focus</span>
+        <span class="hero-pill">Census ACS 2024</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- COLUMBIA COUNTY -->
+<div class="county-block">
+  <div class="county-header">
+    <div class="county-name">Columbia County</div>
+    <div class="county-grade gAp" style="background:rgba(39,196,100,.12);">A+</div>
+    <div class="county-tag">Augusta Metro · Pop. 165K</div>
+    <div class="county-tag">Niche #1 in GA</div>
+    <div class="county-tag">FMR 2-bed: $1,190–1,400</div>
+  </div>
+  <p class="county-desc">Georgia's highest-ranked county for quality of life — exceptional schools, crime 30–60% below the national average, and housing well below the US median. Anchored by Fort Eisenhower and the Augusta healthcare corridor. Grovetown (best value), Martinez (established middle-class), Evans (upscale family hub) all feed the same top-rated school district.</p>
+  <div class="city-grid">
+
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Grovetown</div><div class="city-sub">City · Pop. 17,580 · Fort Eisenhower adjacent</div></div>
+        <div><div class="qol-grade gAp">A+</div><div class="qol-src">SafeWise · AreaVibes 70</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Best value in county</span><span class="badge bg">Crime −66% below national</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,190–1,331<span class="pill pg">Cheapest</span></span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$161K–279K<span class="pill pg">30–60% below US</span></span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">Very Low</span> 55/100K violent</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Columbia Co. SD · 87% grad rate</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-grovetown" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">61.3%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">27.8%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">14.0%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">2.4%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">7.8%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Evans</div><div class="city-sub">CDP · Pop. 39,727 · flagship suburb</div></div>
+        <div><div class="qol-grade gAp">A+</div><div class="qol-src">Niche A+ · AreaVibes 78</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Best overall in county</span><span class="badge bb">Premier schools &amp; amenities</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,250–1,450</span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$250K–350K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">Very Low</span> safest in county</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Columbia Co. SD · top-rated</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-evans" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">75.3%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">9.9%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">5.5%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">6.6%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">4.8%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city-card">
+      <div class="city-top">
+        <div><div class="city-name">Martinez</div><div class="city-sub">CDP · Pop. 36,000 · between Augusta &amp; Evans</div></div>
+        <div><div class="qol-grade gA">A</div><div class="qol-src">Niche A · AreaVibes 74</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Solid mid-tier value</span><span class="badge by">Older housing stock</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,200–1,400</span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$200K–290K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">Low</span></span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Columbia Co. SD · solid</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-martinez" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">66.8%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">13.8%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">6.6%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">6.3%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">6.5%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- FULTON COUNTY -->
+<div class="county-block">
+  <div class="county-header">
+    <div class="county-name">Fulton County</div>
+    <div class="county-grade gA" style="background:rgba(39,196,100,.08);">A</div>
+    <div class="county-tag">Atlanta Metro · Pop. 1.1M</div>
+    <div class="county-tag">GA's economic engine</div>
+    <div class="county-tag">2-bed: $1,800–2,800+</div>
+  </div>
+  <p class="county-desc">The only Georgia county where income trajectory steepens over time. North Fulton (Alpharetta, Roswell, Sandy Springs) is A+ suburban territory while South Fulton pulls the average down. Atlanta's media market gives a Head of Video title leverage toward $80–110K. High cost, but unmatched career ceiling.</p>
+  <div class="city-grid">
+
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Alpharetta</div><div class="city-sub">City · Pop. 66,855 · North Fulton tech corridor</div></div>
+        <div><div class="qol-grade gAp">A+</div><div class="qol-src">Niche A+ · AreaVibes 82</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Best QOL in Fulton</span><span class="badge bb">Top tech job market</span><span class="badge br">Highest rent</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$2,200–2,800<span class="pill pr">Premium</span></span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$580K–750K+</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">Very Low</span></span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Fulton Co. North · A+</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-alpharetta" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">52.2%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">20.4%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">11.2%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">9.4%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">6.8%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Roswell</div><div class="city-sub">City · Pop. 92,621 · North Fulton · historic</div></div>
+        <div><div class="qol-grade gAp">A+</div><div class="qol-src">Niche A+ · AreaVibes 80</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Best value in North Fulton</span><span class="badge bp">Historic charm + trails</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,900–2,400</span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$480K–620K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">Very Low</span></span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Fulton Co. North · A</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-roswell" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">60.4%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">16.3%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">11.6%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">4.8%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">6.9%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Sandy Springs</div><div class="city-sub">City · Pop. 107,087 · Central Fulton</div></div>
+        <div><div class="qol-grade gA">A</div><div class="qol-src">Niche A · AreaVibes 78</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bb">Most corporate HQs</span><span class="badge bg">Media/entertainment hub</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,900–2,500</span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$500K–700K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">Low</span> north end safest</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Fulton Co. North · A tier</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-sandy" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">54.0%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">20.9%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">11.8%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">7.5%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">5.8%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city-card">
+      <div class="city-top">
+        <div><div class="city-name">Atlanta (city proper)</div><div class="city-sub">City · Pop. 505,268</div></div>
+        <div><div class="qol-grade gBp">B+</div><div class="qol-src">Niche B+ · AreaVibes 65</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bp">Best career ceiling in GA</span><span class="badge br">Crime varies by neighborhood</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed (Midtown/Buckhead)</span><span class="sv">$2,400–3,500<span class="pill pr">Luxury</span></span></div>
+        <div class="stat-row"><span class="sl">2-bed (outer)</span><span class="sv">$1,500–2,000</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill py">Elevated</span> varies by district</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Atlanta Public Schools · mixed</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-atlanta" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">45.9%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">39.1%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">6.3%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">5.3%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">3.4%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CLARKE COUNTY -->
+<div class="county-block">
+  <div class="county-header">
+    <div class="county-name">Clarke County (Athens)</div>
+    <div class="county-grade gAm" style="background:rgba(39,196,100,.07);">A−</div>
+    <div class="county-tag">Northeast GA · UGA · Pop. 130K</div>
+    <div class="county-tag">AreaVibes 80</div>
+  </div>
+  <p class="county-desc">Athens earns its A− from genuine college-town infrastructure. UGA anchors walkability, culture, and dining density that rivals cities twice its size. Best QOL-per-dollar in the entire Georgia analysis — for a teacher who wants urban lifestyle at sub-Atlanta pricing, this is the case. Career ceiling outside academia/healthcare hits around year 6–7.</p>
+  <div class="city-grid">
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Athens</div><div class="city-sub">City · Pop. 130K · UGA college town</div></div>
+        <div><div class="qol-grade gAm">A−</div><div class="qol-src">AreaVibes 80 · Niche A−</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Best culture-per-dollar</span><span class="badge bp">Live music capital of SE</span><span class="badge by">Schools inconsistent</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,300–1,600</span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$250K–380K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill py">Moderate</span> college-town patterns</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">ACC Schools · mixed; A magnets exist</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-athens" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">52.1%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">27.5%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">13.2%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">4.1%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">3.1%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RICHMOND COUNTY -->
+<div class="county-block">
+  <div class="county-header">
+    <div class="county-name">Richmond County (Augusta)</div>
+    <div class="county-grade gC" style="background:rgba(232,184,75,.08);">C+</div>
+    <div class="county-tag">Augusta Metro · Pop. 202K</div>
+    <div class="county-tag">2-bed avg: $950–1,200</div>
+  </div>
+  <p class="county-desc">Cheap and improving, but city-proper crime and inconsistent schools are real drags. Most livable family life has migrated to adjacent Columbia County. Best as an ultra-budget landing pad or for healthcare/military workers tethered to Augusta who can live in Columbia Co. and commute in.</p>
+  <div class="city-grid">
+    <div class="city-card caution">
+      <div class="city-top">
+        <div><div class="city-name">Augusta (city proper)</div><div class="city-sub">Consolidated city · Pop. 202K</div></div>
+        <div><div class="qol-grade gC">C+</div><div class="qol-src">AreaVibes 55 · Niche C+</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Most affordable</span><span class="badge br">Crime above state avg</span><span class="badge by">Schools inconsistent</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$950–1,200<span class="pill pg">Most affordable</span></span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$130K–200K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pr">Elevated</span> above state avg</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Richmond Co. SD · mixed</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-augusta" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">54.0%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">33.1%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">7.3%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">2.5%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">3.1%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TABLE -->
+<div class="section-title">📊 City Cross-Comparison</div>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th>City</th><th>County</th><th>Grade</th><th>2-bed Rent</th><th>Med. Home</th><th>Crime</th><th>Schools</th><th>White</th><th>Black</th><th>Hispanic</th><th>Asian</th><th>Best For</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Evans</strong></td><td>Columbia</td><td class="tg gAp">A+</td><td>$1,250–1,450</td><td>$250–350K</td><td style="color:var(--green)">Very Low</td><td>A+</td><td>75.3%</td><td>9.9%</td><td>5.5%</td><td>6.6%</td><td>Best overall pick</td></tr>
+      <tr><td><strong>Grovetown</strong></td><td>Columbia</td><td class="tg gAp">A+</td><td>$1,190–1,331</td><td>$161–279K</td><td style="color:var(--green)">Very Low</td><td>A</td><td>61.3%</td><td>27.8%</td><td>14.0%</td><td>2.4%</td><td>Best value</td></tr>
+      <tr><td><strong>Alpharetta</strong></td><td>Fulton</td><td class="tg gAp">A+</td><td>$2,200–2,800</td><td>$580–750K+</td><td style="color:var(--green)">Very Low</td><td>A+</td><td>52.2%</td><td>11.2%</td><td>9.4%</td><td>20.4%</td><td>Tech career + schools</td></tr>
+      <tr><td><strong>Roswell</strong></td><td>Fulton</td><td class="tg gAp">A+</td><td>$1,900–2,400</td><td>$480–620K</td><td style="color:var(--green)">Very Low</td><td>A</td><td>60.4%</td><td>11.6%</td><td>16.3%</td><td>4.8%</td><td>North Fulton value</td></tr>
+      <tr><td><strong>Martinez</strong></td><td>Columbia</td><td class="tg gA">A</td><td>$1,200–1,400</td><td>$200–290K</td><td style="color:var(--green)">Low</td><td>A</td><td>66.8%</td><td>13.8%</td><td>6.6%</td><td>6.3%</td><td>Established families</td></tr>
+      <tr><td><strong>Sandy Springs</strong></td><td>Fulton</td><td class="tg gA">A</td><td>$1,900–2,500</td><td>$500–700K</td><td style="color:var(--green)">Low</td><td>A</td><td>54.0%</td><td>20.9%</td><td>11.8%</td><td>7.5%</td><td>Corporate + media</td></tr>
+      <tr><td><strong>Athens</strong></td><td>Clarke</td><td class="tg gAm">A−</td><td>$1,300–1,600</td><td>$250–380K</td><td style="color:var(--yellow)">Moderate</td><td>B+/A</td><td>52.1%</td><td>27.5%</td><td>13.2%</td><td>4.1%</td><td>Culture-per-dollar</td></tr>
+      <tr><td><strong>Atlanta</strong></td><td>Fulton</td><td class="tg gBp">B+</td><td>$1,500–3,500</td><td>$380–800K+</td><td style="color:var(--yellow)">Elevated</td><td>Mixed</td><td>39.1%</td><td>45.9%</td><td>6.3%</td><td>5.3%</td><td>Career ceiling play</td></tr>
+      <tr><td><strong>Augusta</strong></td><td>Richmond</td><td class="tg gC">C+</td><td>$950–1,200</td><td>$130–200K</td><td style="color:var(--red)">Elevated</td><td>Mixed</td><td>33.1%</td><td>54.0%</td><td>7.3%</td><td>2.5%</td><td>Ultra-budget</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SYNOPSIS -->
+<div class="section-title">📝 Synopsis</div>
+<div class="syn-grid">
+  <div class="syn-card"><div class="syn-title">Columbia Co. — Clear Winner</div><div class="syn-body">For a teacher + remote worker household, Columbia County is the safest, most affordable high-QOL option. Grovetown for value, Evans for premium suburban life, Martinez for the middle. A+ schools, very low crime, housing 30–60% below US median — a combination Fulton simply cannot match.</div></div>
+  <div class="syn-card"><div class="syn-title">Fulton Co. — The Long Game</div><div class="syn-body">The only county where income trajectory steepens over time. Atlanta's media market turns a Head of Video title into an $80–110K credential. But the cost premium is real and schools only deliver in North Fulton. Trading affordability for career ceiling.</div></div>
+  <div class="syn-card"><div class="syn-title">Athens — Best Culture Play</div><div class="syn-body">UGA gives Athens restaurant density, live music, and walkability that rival cities twice its size. Compelling for a teacher who values urban lifestyle at sub-Atlanta pricing. Career ceiling outside academia or healthcare hits around year 6–7.</div></div>
+  <div class="syn-card"><div class="syn-title">Augusta City — Avoid Unless Tethered</div><div class="syn-body">Richmond County city proper grades C+ for good reasons. The smart play if your life requires the Augusta metro: live in Columbia County, commute in — A+ safety and schools while accessing Augusta's healthcare and military jobs.</div></div>
+</div>
+
+<!-- ADD A CITY -->
+<div class="add-city-section">
+  <h3>➕ Add a City to Georgia</h3>
+  <p>Type any Georgia city — Claude researches and adds it with full demographics, rent, crime, and schools data.</p>
+  <div class="add-city-row">
+    <input class="add-city-input" id="city-input" type="text" placeholder="e.g. Savannah, Macon, Kennesaw, Dunwoody…" onkeydown="if(event.key==='Enter')submitCity()">
+    <button class="btn-research" id="city-btn" onclick="submitCity()">Research City ✦</button>
+  </div>
+  <div class="add-city-status" id="city-status"></div>
+  <div class="custom-cities-grid" id="custom-grid"></div>
+</div>
+
+<div class="page-footer">
+  Sources: Niche 2026 · AreaVibes · SafeWise · HUD FMR · Redfin/Zillow · FBI UCR · Census ACS 2020–2024<br>
+  <a href="index.html">← Back to Hub</a> &nbsp;·&nbsp; <a href="south-carolina.html">South Carolina →</a>
+</div>
+
+</div><!-- /content -->
+<div id="toast"></div>
+
+<script>
+const W='#38b6f8',B='#9b7aea',H='#f97316',A='#27c464',O='#d1ddf0';
+
+function drawPie(id,segs){
+  const c=document.getElementById(id);if(!c)return;
+  const ctx=c.getContext('2d'),cx=c.width/2,cy=c.height/2,r=Math.min(cx,cy)-3;
+  let s=-Math.PI/2;
+  segs.forEach(([p,col])=>{
+    const a=(p/100)*2*Math.PI;
+    ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,r,s,s+a);ctx.closePath();
+    ctx.fillStyle=col;ctx.fill();s+=a;
+  });
+  ctx.beginPath();ctx.arc(cx,cy,r*.42,0,2*Math.PI);ctx.fillStyle='#06090f';ctx.fill();
+}
+
+drawPie('p-grovetown',  [[61.3,W],[27.8,B],[14.0,H],[2.4,A],[7.8,O]]);
+drawPie('p-evans',      [[75.3,W],[9.9,B],[5.5,H],[6.6,A],[4.8,O]]);
+drawPie('p-martinez',   [[66.8,W],[13.8,B],[6.6,H],[6.3,A],[6.5,O]]);
+drawPie('p-alpharetta', [[52.2,W],[20.4,A],[11.2,B],[9.4,H],[6.8,O]]);
+drawPie('p-roswell',    [[60.4,W],[16.3,H],[11.6,B],[4.8,A],[6.9,O]]);
+drawPie('p-sandy',      [[54.0,W],[20.9,B],[11.8,H],[7.5,A],[5.8,O]]);
+drawPie('p-atlanta',    [[45.9,B],[39.1,W],[6.3,H],[5.3,A],[3.4,O]]);
+drawPie('p-athens',     [[52.1,W],[27.5,B],[13.2,H],[4.1,A],[3.1,O]]);
+drawPie('p-augusta',    [[54.0,B],[33.1,W],[7.3,H],[2.5,A],[3.1,O]]);
+
+async function submitCity(){
+  const inp=document.getElementById('city-input');
+  const btn=document.getElementById('city-btn');
+  const city=inp.value.trim(); if(!city)return;
+  inp.value=''; btn.disabled=true; btn.textContent='⟳ Researching…';
+  document.getElementById('city-status').textContent='Researching '+city+', Georgia…';
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:'Research "'+city+', Georgia" and return ONLY valid JSON (no markdown) with fields: city, county, population, qol_grade, qol_source, rent_2bed, median_home, crime (Very Low/Low/Moderate/Elevated/High), crime_color (green/yellow/red), schools, vibe, is_star (bool), is_caution (bool), badges:[{text,type}] (type=green/red/yellow/blue/purple), demographics:{white,black,hispanic,asian,other} (numbers summing ~100), demo_source. Use real Census ACS 2020-2024 data.'}]})});
+    const d=await res.json();
+    let raw=(d.content?.[0]?.text||'').trim().replace(/```json|```/g,'').trim();
+    const m=raw.match(/\{[\s\S]*\}/); if(!m)throw new Error('No JSON');
+    addCard(JSON.parse(m[0]));
+    document.getElementById('city-status').textContent='';
+    showToast('✓ '+city+' added!','success');
+  }catch(e){
+    document.getElementById('city-status').textContent='Error: '+e.message;
+    showToast('Failed: '+e.message,'error');
+  }finally{ btn.disabled=false; btn.textContent='Research City ✦'; }
+}
+
+function addCard(c){
+  const pid='pc-'+Date.now();
+  const cm=c.crime_color==='green'?'pg':c.crime_color==='red'?'pr':'py';
+  const bm={green:'bg',red:'br',yellow:'by',blue:'bb',purple:'bp'};
+  const badges=(c.badges||[]).map(b=>`<span class="badge ${bm[b.type]||'bb'}">${b.text}</span>`).join('');
+  const card=document.createElement('div');
+  card.className='city-card'+(c.is_star?' star':'')+(c.is_caution?' caution':'');
+  card.innerHTML=`
+    <div class="city-top">
+      <div>
+        <div class="city-name">${c.city} <span style="font-size:10px;background:rgba(0,194,255,.14);color:var(--accent);padding:2px 7px;border-radius:5px;font-weight:600;vertical-align:middle;">ADDED</span></div>
+        <div class="city-sub">${c.county} · Pop. ${c.population}</div>
+      </div>
+      <div><div class="qol-grade gAp">${c.qol_grade}</div><div class="qol-src">${c.qol_source}</div></div>
+    </div>
+    <div class="badge-row">${badges}</div>
+    <div class="stats">
+      <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">${c.rent_2bed}</span></div>
+      <div class="stat-row"><span class="sl">Median home</span><span class="sv">${c.median_home}</span></div>
+      <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill ${cm}">${c.crime}</span></span></div>
+      <div class="stat-row"><span class="sl">Schools</span><span class="sv">${c.schools}</span></div>
+    </div>
+    <div class="demo-section">
+      <div class="demo-title">Demographics · ${c.demo_source}</div>
+      <div class="demo-inner">
+        <div class="pie-wrap"><canvas id="${pid}" width="80" height="80"></canvas></div>
+        <div class="legend">
+          ${[['#38b6f8','White',c.demographics.white],['#9b7aea','Black',c.demographics.black],['#f97316','Hispanic',c.demographics.hispanic],['#27c464','Asian',c.demographics.asian],['#d1ddf0','Other',c.demographics.other]].map(([col,lbl,pct])=>`
+          <div class="leg-row"><div class="leg-dot" style="background:${col}"></div><span class="leg-label">${lbl}</span><span class="leg-pct">${pct}%</span></div>`).join('')}
+        </div>
+      </div>
+    </div>
+    <div class="city-sub" style="margin-top:2px;font-style:italic;">${c.vibe}</div>`;
+  document.getElementById('custom-grid').appendChild(card);
+  requestAnimationFrame(()=>drawPie(pid,[[c.demographics.white,W],[c.demographics.black,B],[c.demographics.hispanic,H],[c.demographics.asian,A],[c.demographics.other,O]]));
+}
+
+function showToast(m,t){const el=document.getElementById('toast');el.textContent=m;el.className='show '+t;setTimeout(()=>el.className='',3500);}
+</script>
+</body>
+</html>

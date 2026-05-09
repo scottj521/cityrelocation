@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>South Carolina — City Relocator</title>
+<meta name="description" content="Best counties and cities in South Carolina — QOL grades, rent, crime, schools, and demographics for Greenville, York, Charleston, Lexington counties.">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html">🏠 Hub</a>
+  <span class="nav-sep">›</span>
+  <span class="nav-cur">🌴 South Carolina</span>
+  <div class="nav-right"><a href="georgia.html">← Georgia</a></div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-flag">🌴</div>
+    <div class="hero-text">
+      <h1>South Carolina — Best Counties &amp; Cities 2026</h1>
+      <p>County-level grades with city breakdowns — QOL scores, rent, home prices, crime, schools, and Census demographics with pie charts for every city.</p>
+      <div class="hero-pills">
+        <span class="hero-pill">5 Counties</span>
+        <span class="hero-pill">11 Cities</span>
+        <span class="hero-pill">A+–B Grades</span>
+        <span class="hero-pill">Teacher + Remote Worker Focus</span>
+        <span class="hero-pill">Census ACS 2024</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+
+<!-- GREENVILLE COUNTY -->
+<div class="county-block">
+  <div class="county-header">
+    <div class="county-name">Greenville County</div>
+    <div class="county-grade gAp" style="background:rgba(39,196,100,.12);">A+</div>
+    <div class="county-tag">Niche #1 County in SC</div>
+    <div class="county-tag">Upstate · Pop. 545K</div>
+    <div class="county-tag">HUD FMR 2-bed: $1,306</div>
+  </div>
+  <p class="county-desc">SC's most populous county and economic engine. BMW North American HQ, Michelin USA, and a booming tech sector anchor the job market. Downtown Greenville is genuinely walkable with a vibrant restaurant row and Falls Park. Suburbs like Simpsonville and Five Forks offer A+ schools with far more affordable housing than comparable metros.</p>
+  <div class="city-grid">
+
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Five Forks</div><div class="city-sub">Unincorporated CDP · SE Greenville Co.</div></div>
+        <div><div class="qol-grade gAp">A+</div><div class="qol-src">Niche A+ · AreaVibes 80</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Best QOL in county</span><span class="badge bg">Top schools statewide</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,200–1,450<span class="pill pg">Below avg</span></span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$380K–470K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">Very Low</span></span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Greenville Co. · Niche A+</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-fiveforks" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">74.6%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">8.4%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">5.5%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">6.1%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">5.4%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Simpsonville</div><div class="city-sub">City · Pop. 26,144 · "Golden Strip" I-385</div></div>
+        <div><div class="qol-grade gA">A</div><div class="qol-src">Niche A · AreaVibes 87</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Best value city pick</span><span class="badge bb">Fastest growing in county</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,200–1,500<span class="pill pg">Value</span></span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$280K–360K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">Low</span> below state avg</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Greenville Co. · A tier</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-simpsonville" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">63.8%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">16.6%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">10.2%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">1.7%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">7.7%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city-card">
+      <div class="city-top">
+        <div><div class="city-name">Greenville (city proper)</div><div class="city-sub">City · Pop. 72,935 · walkable downtown hub</div></div>
+        <div><div class="qol-grade gAm">A−</div><div class="qol-src">Niche A− · AreaVibes 75</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bp">Best walkability in SC</span><span class="badge by">Higher rent downtown</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed (downtown)</span><span class="sv">$1,600–2,200<span class="pill pr">Premium</span></span></div>
+        <div class="stat-row"><span class="sl">2-bed (suburbs)</span><span class="sv">$1,200–1,500</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill py">Moderate</span> pockets vary</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Mixed; suburban schools stronger</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-greenville" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">66.2%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">19.4%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">7.2%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">2.2%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">5.0%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- YORK COUNTY -->
+<div class="county-block">
+  <div class="county-header">
+    <div class="county-name">York County</div>
+    <div class="county-grade gAp" style="background:rgba(39,196,100,.12);">A+</div>
+    <div class="county-tag">Niche #2 County in SC</div>
+    <div class="county-tag">Charlotte Metro · Pop. 320K+</div>
+    <div class="county-tag">2-bed: $1,450–1,700</div>
+  </div>
+  <p class="county-desc">SC's hidden gem — technically South Carolina, functionally the Charlotte metro. I-77 puts residents 15–25 min from Uptown Charlotte, unlocking one of the Southeast's strongest job markets at SC cost of living. Tega Cay ranked Niche #1 best place in SC for 2026.</p>
+  <div class="city-grid">
+
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Tega Cay</div><div class="city-sub">City · Pop. 13,600 · Lake Wylie peninsula</div></div>
+        <div><div class="qol-grade gAp">A+</div><div class="qol-src">Niche #1 in SC · 2026</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">#1 Best Place in SC</span><span class="badge bg">Elite schools</span><span class="badge by">Highest home prices</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,650–2,100<span class="pill pr">Premium</span></span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$529K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">Very Low</span></span></div>
+        <div class="stat-row"><span class="sl">Charlotte commute</span><span class="sv">~20 min via I-77</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-tegacay" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">78.0%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">4.1%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">5.7%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">7.4%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">4.8%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Fort Mill</div><div class="city-sub">City · Pop. 36,244 · fastest-growing in region</div></div>
+        <div><div class="qol-grade gAp">A+</div><div class="qol-src">Niche A+ · AreaVibes high</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Best value in York Co.</span><span class="badge bb">Baxter Village planned community</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,500–1,900</span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$380K–480K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">Very Low</span></span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Fort Mill SD · A tier statewide</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-fortmill" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">70.2%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">12.1%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">6.8%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">5.3%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">5.6%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city-card">
+      <div class="city-top">
+        <div><div class="city-name">Rock Hill</div><div class="city-sub">City · Pop. 75,000 · York Co. seat</div></div>
+        <div><div class="qol-grade gBp">B+</div><div class="qol-src">Niche B+ · AreaVibes 72</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Most affordable in York Co.</span><span class="badge by">Crime pockets exist</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,200–1,650<span class="pill pg">Best value</span></span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$235K–310K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill py">Moderate</span> varies by neighborhood</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Rock Hill SD · B range</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-rockhill" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">56.5%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">29.4%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">8.3%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">2.4%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">3.4%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- CHARLESTON COUNTY -->
+<div class="county-block">
+  <div class="county-header">
+    <div class="county-name">Charleston County</div>
+    <div class="county-grade gA" style="background:rgba(39,196,100,.08);">A</div>
+    <div class="county-tag">Coastal · Historic · Pop. 430K</div>
+    <div class="county-tag">FMR 2-bed: $2,037 city</div>
+  </div>
+  <p class="county-desc">SC's prestige coastal market — stunning history, aerospace corridor (Boeing, Volvo), and some of the best suburban schools in the state. Wide internal variance: Mount Pleasant is pure A+, downtown expensive, North Charleston pulls the county down with crime. Families should anchor to Mount Pleasant or Summerville.</p>
+  <div class="city-grid">
+
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Mount Pleasant</div><div class="city-sub">Suburb · Pop. 94,000 · east of downtown</div></div>
+        <div><div class="qol-grade gAp">A+</div><div class="qol-src">Niche #1 in Charleston Co.</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Safest in county</span><span class="badge bg">Top-tier schools</span><span class="badge br">Highest rent</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$2,200–2,600<span class="pill pr">Expensive</span></span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$620K–750K+</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">Very Low</span> 0.8/1K violent</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Wando High A · Academic Magnet A+</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-mtp" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">80.2%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">7.9%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">5.2%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">3.8%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">2.9%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Summerville</div><div class="city-sub">Suburb · Pop. 52,000 · NW of Charleston</div></div>
+        <div><div class="qol-grade gAm">A−</div><div class="qol-src">Niche A− · strong AreaVibes</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Best value near Charleston</span><span class="badge bb">Nexton master community</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,700–1,950<span class="pill pg">Value vs Mt Pleasant</span></span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$310K–420K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">Low</span> suburban safe</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Highly rated · fast growing</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-summerville" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">65.8%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">21.4%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">7.1%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">2.3%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">3.4%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city-card caution">
+      <div class="city-top">
+        <div><div class="city-name">North Charleston</div><div class="city-sub">City · Pop. 115,000 · industrial corridor</div></div>
+        <div><div class="qol-grade gB">B</div><div class="qol-src">Niche B · AreaVibes 62</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Most affordable in county</span><span class="badge br">Crime concerns</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,500–1,750<span class="pill pg">Cheapest near Charleston</span></span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$250K–340K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pr">Elevated</span> above county avg</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Mixed · some strong magnets</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-ncharleston" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">44.1%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">38.2%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">11.0%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">2.8%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">3.9%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- LEXINGTON COUNTY -->
+<div class="county-block">
+  <div class="county-header">
+    <div class="county-name">Lexington County</div>
+    <div class="county-grade gA" style="background:rgba(39,196,100,.08);">A</div>
+    <div class="county-tag">Midlands · Columbia suburbs · Pop. 330K</div>
+    <div class="county-tag">2-bed: $1,100–1,400</div>
+  </div>
+  <p class="county-desc">Affordable, family-focused counterpart to Richland County. Wraps around Columbia's western side along Lake Murray. Schools consistently outperform state averages; Town of Lexington crime is 46% below the national average. The teacher + remote worker sweet spot in SC — low cost, solid schools, quiet suburbs within 25 min of Columbia.</p>
+  <div class="city-grid">
+
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Lexington (town)</div><div class="city-sub">Town · Pop. 23,000 · county seat</div></div>
+        <div><div class="qol-grade gAm">A−</div><div class="qol-src">Crime A− · AreaVibes solid</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">46% below national crime avg</span><span class="badge bg">Great schools</span><span class="badge bb">Lake Murray access</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,150–1,400<span class="pill pg">Affordable</span></span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$230K–310K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">A−</span> safer than 86% of US cities</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Lexington Co. SD 1 · top in Midlands</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-lexington" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">73.1%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">12.8%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">8.2%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">3.1%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">2.8%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="city-card star">
+      <div class="city-top">
+        <div><div class="city-name">Irmo</div><div class="city-sub">Town · Pop. 16,000 · NW Columbia suburb</div></div>
+        <div><div class="qol-grade gAm">A−</div><div class="qol-src">Niche A · AreaVibes 73</div></div>
+      </div>
+      <div class="badge-row"><span class="badge bg">Top value pick in SC</span><span class="badge bb">Lake Murray minutes away</span></div>
+      <div class="stats">
+        <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">$1,100–1,350<span class="pill pg">Best value in Midlands</span></span></div>
+        <div class="stat-row"><span class="sl">Median home</span><span class="sv">$195K–270K</span></div>
+        <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill pg">Low</span> safe suburban</span></div>
+        <div class="stat-row"><span class="sl">Schools</span><span class="sv">Lex-Richland SD 5 · strong</span></div>
+      </div>
+      <div class="demo-section">
+        <div class="demo-title">Demographics · Census ACS 2024</div>
+        <div class="demo-inner">
+          <div class="pie-wrap"><canvas id="p-irmo" width="80" height="80"></canvas></div>
+          <div class="legend">
+            <div class="leg-row"><div class="leg-dot" style="background:#38b6f8"></div><span class="leg-label">White</span><span class="leg-pct">68.4%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#9b7aea"></div><span class="leg-label">Black</span><span class="leg-pct">17.9%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#f97316"></div><span class="leg-label">Hispanic</span><span class="leg-pct">7.0%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#27c464"></div><span class="leg-label">Asian</span><span class="leg-pct">3.4%</span></div>
+            <div class="leg-row"><div class="leg-dot" style="background:#d1ddf0"></div><span class="leg-label">Other / Multi</span><span class="leg-pct">3.3%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- TABLE -->
+<div class="section-title">📊 City Cross-Comparison</div>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th>City</th><th>County</th><th>Grade</th><th>2-bed Rent</th><th>Med. Home</th><th>Crime</th><th>Schools</th><th>White</th><th>Black</th><th>Hispanic</th><th>Asian</th><th>Best For</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Five Forks</strong></td><td>Greenville</td><td class="tg gAp">A+</td><td>$1,200–1,450</td><td>$380–470K</td><td style="color:var(--green)">Very Low</td><td>A+</td><td>74.6%</td><td>8.4%</td><td>5.5%</td><td>6.1%</td><td>Top-tier families</td></tr>
+      <tr><td><strong>Tega Cay</strong></td><td>York</td><td class="tg gAp">A+</td><td>$1,650–2,100</td><td>$529K</td><td style="color:var(--green)">Very Low</td><td>A+</td><td>78.0%</td><td>4.1%</td><td>5.7%</td><td>7.4%</td><td>Charlotte commuters</td></tr>
+      <tr><td><strong>Fort Mill</strong></td><td>York</td><td class="tg gAp">A+</td><td>$1,500–1,900</td><td>$380–480K</td><td style="color:var(--green)">Very Low</td><td>A</td><td>70.2%</td><td>12.1%</td><td>6.8%</td><td>5.3%</td><td>Families + Charlotte</td></tr>
+      <tr><td><strong>Mt Pleasant</strong></td><td>Charleston</td><td class="tg gAp">A+</td><td>$2,200–2,600</td><td>$620–750K+</td><td style="color:var(--green)">Very Low</td><td>A+</td><td>80.2%</td><td>7.9%</td><td>5.2%</td><td>3.8%</td><td>Coastal families</td></tr>
+      <tr><td><strong>Simpsonville</strong></td><td>Greenville</td><td class="tg gA">A</td><td>$1,200–1,500</td><td>$280–360K</td><td style="color:var(--green)">Low</td><td>A</td><td>63.8%</td><td>16.6%</td><td>10.2%</td><td>1.7%</td><td>Best value pick</td></tr>
+      <tr><td><strong>Lexington town</strong></td><td>Lexington</td><td class="tg gAm">A−</td><td>$1,150–1,400</td><td>$230–310K</td><td style="color:var(--green)">A−</td><td>A</td><td>73.1%</td><td>12.8%</td><td>8.2%</td><td>3.1%</td><td>Teacher + remote worker</td></tr>
+      <tr><td><strong>Irmo</strong></td><td>Lexington</td><td class="tg gAm">A−</td><td>$1,100–1,350</td><td>$195–270K</td><td style="color:var(--green)">Low</td><td>A</td><td>68.4%</td><td>17.9%</td><td>7.0%</td><td>3.4%</td><td>Cheapest safe suburb</td></tr>
+      <tr><td><strong>Greenville city</strong></td><td>Greenville</td><td class="tg gAm">A−</td><td>$1,200–2,200</td><td>$280–500K</td><td style="color:var(--yellow)">Moderate</td><td>B+/A</td><td>66.2%</td><td>19.4%</td><td>7.2%</td><td>2.2%</td><td>Urban professionals</td></tr>
+      <tr><td><strong>Summerville</strong></td><td>Charleston</td><td class="tg gAm">A−</td><td>$1,700–1,950</td><td>$310–420K</td><td style="color:var(--green)">Low</td><td>A</td><td>65.8%</td><td>21.4%</td><td>7.1%</td><td>2.3%</td><td>Charleston on budget</td></tr>
+      <tr><td><strong>Rock Hill</strong></td><td>York</td><td class="tg gBp">B+</td><td>$1,200–1,650</td><td>$235–310K</td><td style="color:var(--yellow)">Moderate</td><td>B</td><td>56.5%</td><td>29.4%</td><td>8.3%</td><td>2.4%</td><td>Budget Charlotte commute</td></tr>
+      <tr><td><strong>N. Charleston</strong></td><td>Charleston</td><td class="tg gB">B</td><td>$1,500–1,750</td><td>$250–340K</td><td style="color:var(--red)">Elevated</td><td>Mixed</td><td>44.1%</td><td>38.2%</td><td>11.0%</td><td>2.8%</td><td>Boeing/Volvo workers</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SYNOPSIS -->
+<div class="section-title">📝 Synopsis</div>
+<div class="syn-grid">
+  <div class="syn-card"><div class="syn-title">Greenville Co. ≈ Fulton Co. (GA)</div><div class="syn-body">Both are the dominant economic powerhouses of their states. Greenville is significantly more affordable than Atlanta but the career ceiling is lower. For a remote worker Greenville wins on QOL-per-dollar; for career trajectory, Fulton/Atlanta still leads.</div></div>
+  <div class="syn-card"><div class="syn-title">York Co. ≈ Columbia Co. (GA)</div><div class="syn-body">Same formula: live in SC, commute into a bigger metro. York is stronger because Charlotte's job market dwarfs Augusta's. Tega Cay and Fort Mill are the Evans/Martinez equivalents — safe, A+ schools, dollar goes further than the major city.</div></div>
+  <div class="syn-card"><div class="syn-title">Lexington Co. — SC's Teacher Sweet Spot</div><div class="syn-body">Irmo and Lexington town are SC's Grovetown/Evans. Crime A− (safer than 86% of US cities), excellent schools to teach in, housing costs that fit a dual-income household. The teacher + remote worker formula works best here in SC.</div></div>
+  <div class="syn-card"><div class="syn-title">Charleston Co. — Prestige With a Price</div><div class="syn-body">Mount Pleasant is SC's Alpharetta — the premium suburb that earns its price. But Charleston's market is even more expensive and the job market is narrowly tied to aerospace and tourism. Unless you're well compensated there, Summerville is the smarter entry point.</div></div>
+</div>
+
+<!-- ADD A CITY -->
+<div class="add-city-section">
+  <h3>➕ Add a City to South Carolina</h3>
+  <p>Type any South Carolina city — Claude researches and adds it with full demographics, rent, crime, and schools data.</p>
+  <div class="add-city-row">
+    <input class="add-city-input" id="city-input" type="text" placeholder="e.g. Columbia, Myrtle Beach, Anderson, Bluffton…" onkeydown="if(event.key==='Enter')submitCity()">
+    <button class="btn-research" id="city-btn" onclick="submitCity()">Research City ✦</button>
+  </div>
+  <div class="add-city-status" id="city-status"></div>
+  <div class="custom-cities-grid" id="custom-grid"></div>
+</div>
+
+<div class="page-footer">
+  Sources: Niche 2026 · AreaVibes · SafeWise · HUD FMR · Redfin/Zillow · FBI UCR · Census ACS 2020–2024<br>
+  <a href="index.html">← Back to Hub</a> &nbsp;·&nbsp; <a href="georgia.html">Georgia →</a>
+</div>
+
+</div><!-- /content -->
+<div id="toast"></div>
+
+<script>
+const W='#38b6f8',B='#9b7aea',H='#f97316',A='#27c464',O='#d1ddf0';
+
+function drawPie(id,segs){
+  const c=document.getElementById(id);if(!c)return;
+  const ctx=c.getContext('2d'),cx=c.width/2,cy=c.height/2,r=Math.min(cx,cy)-3;
+  let s=-Math.PI/2;
+  segs.forEach(([p,col])=>{
+    const a=(p/100)*2*Math.PI;
+    ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,r,s,s+a);ctx.closePath();
+    ctx.fillStyle=col;ctx.fill();s+=a;
+  });
+  ctx.beginPath();ctx.arc(cx,cy,r*.42,0,2*Math.PI);ctx.fillStyle='#06090f';ctx.fill();
+}
+
+drawPie('p-fiveforks',   [[74.6,W],[8.4,B],[5.5,H],[6.1,A],[5.4,O]]);
+drawPie('p-simpsonville',[[63.8,W],[16.6,B],[10.2,H],[1.7,A],[7.7,O]]);
+drawPie('p-greenville',  [[66.2,W],[19.4,B],[7.2,H],[2.2,A],[5.0,O]]);
+drawPie('p-tegacay',     [[78.0,W],[4.1,B],[5.7,H],[7.4,A],[4.8,O]]);
+drawPie('p-fortmill',    [[70.2,W],[12.1,B],[6.8,H],[5.3,A],[5.6,O]]);
+drawPie('p-rockhill',    [[56.5,W],[29.4,B],[8.3,H],[2.4,A],[3.4,O]]);
+drawPie('p-mtp',         [[80.2,W],[7.9,B],[5.2,H],[3.8,A],[2.9,O]]);
+drawPie('p-summerville', [[65.8,W],[21.4,B],[7.1,H],[2.3,A],[3.4,O]]);
+drawPie('p-ncharleston', [[44.1,W],[38.2,B],[11.0,H],[2.8,A],[3.9,O]]);
+drawPie('p-lexington',   [[73.1,W],[12.8,B],[8.2,H],[3.1,A],[2.8,O]]);
+drawPie('p-irmo',        [[68.4,W],[17.9,B],[7.0,H],[3.4,A],[3.3,O]]);
+
+async function submitCity(){
+  const inp=document.getElementById('city-input');
+  const btn=document.getElementById('city-btn');
+  const city=inp.value.trim(); if(!city)return;
+  inp.value=''; btn.disabled=true; btn.textContent='⟳ Researching…';
+  document.getElementById('city-status').textContent='Researching '+city+', South Carolina…';
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:'Research "'+city+', South Carolina" and return ONLY valid JSON (no markdown) with fields: city, county, population, qol_grade, qol_source, rent_2bed, median_home, crime (Very Low/Low/Moderate/Elevated/High), crime_color (green/yellow/red), schools, vibe, is_star (bool), is_caution (bool), badges:[{text,type}] (type=green/red/yellow/blue/purple), demographics:{white,black,hispanic,asian,other} (numbers summing ~100), demo_source. Use real Census ACS 2020-2024 data.'}]})});
+    const d=await res.json();
+    let raw=(d.content?.[0]?.text||'').trim().replace(/```json|```/g,'').trim();
+    const m=raw.match(/\{[\s\S]*\}/); if(!m)throw new Error('No JSON');
+    addCard(JSON.parse(m[0]));
+    document.getElementById('city-status').textContent='';
+    showToast('✓ '+city+' added!','success');
+  }catch(e){
+    document.getElementById('city-status').textContent='Error: '+e.message;
+    showToast('Failed: '+e.message,'error');
+  }finally{ btn.disabled=false; btn.textContent='Research City ✦'; }
+}
+
+function addCard(c){
+  const pid='pc-'+Date.now();
+  const cm=c.crime_color==='green'?'pg':c.crime_color==='red'?'pr':'py';
+  const bm={green:'bg',red:'br',yellow:'by',blue:'bb',purple:'bp'};
+  const badges=(c.badges||[]).map(b=>`<span class="badge ${bm[b.type]||'bb'}">${b.text}</span>`).join('');
+  const card=document.createElement('div');
+  card.className='city-card'+(c.is_star?' star':'')+(c.is_caution?' caution':'');
+  card.innerHTML=`
+    <div class="city-top">
+      <div>
+        <div class="city-name">${c.city} <span style="font-size:10px;background:rgba(0,194,255,.14);color:var(--accent);padding:2px 7px;border-radius:5px;font-weight:600;vertical-align:middle;">ADDED</span></div>
+        <div class="city-sub">${c.county} · Pop. ${c.population}</div>
+      </div>
+      <div><div class="qol-grade gAp">${c.qol_grade}</div><div class="qol-src">${c.qol_source}</div></div>
+    </div>
+    <div class="badge-row">${badges}</div>
+    <div class="stats">
+      <div class="stat-row"><span class="sl">2-bed rent</span><span class="sv">${c.rent_2bed}</span></div>
+      <div class="stat-row"><span class="sl">Median home</span><span class="sv">${c.median_home}</span></div>
+      <div class="stat-row"><span class="sl">Crime</span><span class="sv"><span class="pill ${cm}">${c.crime}</span></span></div>
+      <div class="stat-row"><span class="sl">Schools</span><span class="sv">${c.schools}</span></div>
+    </div>
+    <div class="demo-section">
+      <div class="demo-title">Demographics · ${c.demo_source}</div>
+      <div class="demo-inner">
+        <div class="pie-wrap"><canvas id="${pid}" width="80" height="80"></canvas></div>
+        <div class="legend">
+          ${[['#38b6f8','White',c.demographics.white],['#9b7aea','Black',c.demographics.black],['#f97316','Hispanic',c.demographics.hispanic],['#27c464','Asian',c.demographics.asian],['#d1ddf0','Other',c.demographics.other]].map(([col,lbl,pct])=>`
+          <div class="leg-row"><div class="leg-dot" style="background:${col}"></div><span class="leg-label">${lbl}</span><span class="leg-pct">${pct}%</span></div>`).join('')}
+        </div>
+      </div>
+    </div>
+    <div class="city-sub" style="margin-top:2px;font-style:italic;">${c.vibe}</div>`;
+  document.getElementById('custom-grid').appendChild(card);
+  requestAnimationFrame(()=>drawPie(pid,[[c.demographics.white,W],[c.demographics.black,B],[c.demographics.hispanic,H],[c.demographics.asian,A],[c.demographics.other,O]]));
+}
+
+function showToast(m,t){const el=document.getElementById('toast');el.textContent=m;el.className='show '+t;setTimeout(()=>el.className='',3500);}
+</script>
+</body>
+</html>

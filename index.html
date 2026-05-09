@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>City Relocator — Neighborhood Research Hub</title>
+<meta name="description" content="AI-powered county & city QOL research. Demographics, rent, crime, schools for every U.S. state.">
+<link rel="stylesheet" href="shared.css">
+<style>
+/* ── HUB PAGE STYLES ── */
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  display: flex; align-items: center; gap: 12px;
+  height: 56px; padding: 0 28px;
+  background: rgba(6,9,15,.96); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo-icon {
+  width: 32px; height: 32px; border-radius: 8px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  display: flex; align-items: center; justify-content: center; font-size: 15px;
+}
+.logo-name { font-size: 15px; font-weight: 700; color: var(--text); }
+.logo-name span { color: var(--accent); }
+.header-push { flex: 1; }
+.header-badge { font-family: var(--mono); font-size: 11px; color: var(--dim); }
+.header-badge strong { color: var(--accent); }
+
+.hub-hero {
+  padding: 64px 28px 52px; text-align: center;
+  background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(0,194,255,.055), transparent);
+}
+.hub-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--mono); font-size: 11px; color: var(--accent);
+  letter-spacing: .1em; text-transform: uppercase;
+  background: rgba(0,194,255,.07); border: 1px solid rgba(0,194,255,.18);
+  padding: 4px 14px; border-radius: 20px; margin-bottom: 22px;
+}
+.hub-h1 {
+  font-size: clamp(26px, 5vw, 46px); font-weight: 800;
+  letter-spacing: -.04em; line-height: 1.1; margin-bottom: 18px;
+}
+.hub-h1 em {
+  font-style: normal;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hub-sub { color: var(--muted); font-size: 15px; max-width: 480px; margin: 0 auto 38px; line-height: 1.65; }
+.hub-steps { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+.hub-step { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.step-n {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--bg4); border: 1px solid var(--border2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--mono); font-size: 10px; color: var(--accent); flex-shrink: 0;
+}
+
+.hub-body { max-width: 1120px; margin: 0 auto; padding: 0 28px 80px; }
+.sec-hd {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: 40px 0 18px; padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.sec-hd h2 { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+.sec-hd span { font-size: 11px; color: var(--dim); font-family: var(--mono); }
+
+.states-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(295px, 1fr)); gap: 15px; margin-bottom: 48px; }
+
+/* State card */
+.state-card {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+  display: flex; flex-direction: column;
+  text-decoration: none; color: var(--text);
+  transition: border-color .2s, transform .15s, box-shadow .2s;
+}
+.state-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 10px 36px rgba(0,194,255,.1); }
+.state-card.soon { opacity: .35; pointer-events: none; }
+
+.sc-banner {
+  height: 72px; display: flex; align-items: center;
+  justify-content: space-between; padding: 0 20px;
+  position: relative; overflow: hidden;
+}
+.sc-banner::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,.22); }
+.sc-flag { font-size: 38px; position: relative; z-index: 1; line-height: 1; }
+.sc-badge { position: relative; z-index: 1; font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 20px; font-family: var(--mono); }
+.badge-live { background: rgba(39,196,100,.2); color: var(--green); border: 1px solid rgba(39,196,100,.3); }
+.badge-soon { background: rgba(54,78,114,.3); color: var(--dim); border: 1px solid var(--border); }
+.badge-ai   { background: rgba(0,194,255,.15); color: var(--accent); border: 1px solid rgba(0,194,255,.3); }
+
+.sc-body { padding: 16px 20px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+.sc-name { font-size: 17px; font-weight: 700; letter-spacing: -.02em; }
+.sc-sub  { font-size: 12px; color: var(--muted); line-height: 1.55; }
+.sc-stats { display: flex; gap: 20px; }
+.sc-num { font-size: 18px; font-weight: 800; color: var(--accent); font-family: var(--mono); }
+.sc-lbl { font-size: 10px; color: var(--dim); text-transform: uppercase; letter-spacing: .05em; margin-top: 1px; }
+.sc-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.sc-tag { font-size: 10px; padding: 2px 8px; border-radius: 6px; background: var(--bg4); border: 1px solid var(--border); color: var(--muted); }
+
+.sc-foot { padding: 11px 20px; border-top: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+.sc-foot-meta { font-size: 11px; color: var(--dim); }
+.sc-open {
+  background: var(--accent); color: #000;
+  font-weight: 700; font-size: 11px; padding: 6px 14px;
+  border-radius: 7px; font-family: var(--mono);
+  border: none; cursor: pointer;
+}
+
+/* Add card */
+.add-card {
+  background: var(--bg2); border: 2px dashed var(--border);
+  border-radius: 14px; display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 36px 20px; cursor: pointer; min-height: 218px;
+  text-align: center; gap: 10px;
+  transition: border-color .2s, background .2s;
+}
+.add-card:hover { border-color: rgba(0,194,255,.5); background: rgba(0,194,255,.03); }
+.add-icon { width: 46px; height: 46px; border-radius: 12px; background: var(--bg4); border: 1px solid var(--border2); display: flex; align-items: center; justify-content: center; font-size: 22px; }
+.add-title { font-size: 14px; font-weight: 600; color: var(--muted); }
+.add-sub { font-size: 12px; color: var(--dim); line-height: 1.5; }
+
+/* Methods */
+.method-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(172px, 1fr)); gap: 10px; }
+.method-card { background: var(--bg3); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.method-icon  { font-size: 18px; margin-bottom: 8px; }
+.method-title { font-size: 12px; font-weight: 700; margin-bottom: 4px; }
+.method-body  { font-size: 11px; color: var(--muted); line-height: 1.55; }
+
+.hub-footer { background: var(--bg2); border-top: 1px solid var(--border); padding: 18px 28px; text-align: center; font-size: 11px; color: var(--dim); }
+.hub-footer a { color: var(--accent); text-decoration: none; }
+
+@media(max-width:640px){
+  .site-header { padding: 0 16px; }
+  .hub-hero    { padding: 44px 16px 36px; }
+  .hub-body    { padding: 0 16px 60px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="logo" href="index.html">
+    <div class="logo-icon">🏠</div>
+    <span class="logo-name">City<span>Relocator</span></span>
+  </a>
+  <div class="header-push"></div>
+  <div class="header-badge"><strong id="live-ct">2</strong> states live</div>
+</header>
+
+<div class="hub-hero">
+  <div class="hub-tag">✦ AI-Powered Research</div>
+  <h1 class="hub-h1">Find where to<br><em>live, teach &amp; grow.</em></h1>
+  <p class="hub-sub">County &amp; city breakdowns — QOL grades, rent, crime, schools, and demographic charts for any U.S. state, on demand.</p>
+  <div class="hub-steps">
+    <div class="hub-step"><div class="step-n">1</div>Pick a state</div>
+    <div class="hub-step"><div class="step-n">2</div>Browse counties &amp; cities</div>
+    <div class="hub-step"><div class="step-n">3</div>Add any city with AI</div>
+    <div class="hub-step"><div class="step-n">4</div>Compare &amp; decide</div>
+  </div>
+</div>
+
+<div class="hub-body">
+
+  <div class="sec-hd" style="margin-top:44px;">
+    <h2>Live States</h2>
+    <span id="ct-label">2 of 50 researched</span>
+  </div>
+
+  <div class="states-grid">
+
+    <a class="state-card" href="georgia.html">
+      <div class="sc-banner" style="background:linear-gradient(135deg,#041008,#071810);">
+        <span class="sc-flag">🍑</span>
+        <span class="sc-badge badge-live">LIVE</span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-name">Georgia</div>
+        <div class="sc-sub">Columbia County suburbs to Atlanta's media market — full demographics for every city.</div>
+        <div class="sc-stats">
+          <div><div class="sc-num">6</div><div class="sc-lbl">Counties</div></div>
+          <div><div class="sc-num">9</div><div class="sc-lbl">Cities</div></div>
+          <div><div class="sc-num">A+–C+</div><div class="sc-lbl">Grades</div></div>
+        </div>
+        <div class="sc-tags">
+          <span class="sc-tag">Columbia Co. A+</span>
+          <span class="sc-tag">Fulton A</span>
+          <span class="sc-tag">Athens A−</span>
+          <span class="sc-tag">Pie Charts</span>
+        </div>
+      </div>
+      <div class="sc-foot">
+        <span class="sc-foot-meta">Updated May 2026</span>
+        <span class="sc-open">Open →</span>
+      </div>
+    </a>
+
+    <a class="state-card" href="south-carolina.html">
+      <div class="sc-banner" style="background:linear-gradient(135deg,#060410,#0d0618);">
+        <span class="sc-flag">🌴</span>
+        <span class="sc-badge badge-live">LIVE</span>
+      </div>
+      <div class="sc-body">
+        <div class="sc-name">South Carolina</div>
+        <div class="sc-sub">Tega Cay to Charleston — Greenville, York, Lexington &amp; more, fully mapped.</div>
+        <div class="sc-stats">
+          <div><div class="sc-num">5</div><div class="sc-lbl">Counties</div></div>
+          <div><div class="sc-num">11</div><div class="sc-lbl">Cities</div></div>
+          <div><div class="sc-num">A+–B</div><div class="sc-lbl">Grades</div></div>
+        </div>
+        <div class="sc-tags">
+          <span class="sc-tag">Greenville A+</span>
+          <span class="sc-tag">York A+</span>
+          <span class="sc-tag">Lexington A</span>
+          <span class="sc-tag">Pie Charts</span>
+        </div>
+      </div>
+      <div class="sc-foot">
+        <span class="sc-foot-meta">Updated May 2026</span>
+        <span class="sc-open">Open →</span>
+      </div>
+    </a>
+
+    <div id="ai-anchor"></div>
+
+    <div class="add-card" onclick="openAddModal()">
+      <div class="add-icon">✦</div>
+      <div class="add-title">Add a State</div>
+      <div class="add-sub">AI builds a full county + city<br>breakdown for any U.S. state</div>
+    </div>
+
+  </div>
+
+  <div class="sec-hd"><h2>Coming Soon</h2></div>
+  <div class="states-grid">
+    <div class="state-card soon">
+      <div class="sc-banner" style="background:linear-gradient(135deg,#080a08,#0e120e);"><span class="sc-flag">🌲</span><span class="sc-badge badge-soon">SOON</span></div>
+      <div class="sc-body"><div class="sc-name">North Carolina</div><div class="sc-sub">Charlotte suburbs, Research Triangle, Asheville — something for every budget.</div></div>
+      <div class="sc-foot"><span class="sc-foot-meta">In progress</span></div>
+    </div>
+    <div class="state-card soon">
+      <div class="sc-banner" style="background:linear-gradient(135deg,#0a0606,#160a08);"><span class="sc-flag">🌴</span><span class="sc-badge badge-soon">SOON</span></div>
+      <div class="sc-body"><div class="sc-name">Florida</div><div class="sc-sub">Jacksonville, Tampa suburbs, Space Coast — coastal living vs. affordability.</div></div>
+      <div class="sc-foot"><span class="sc-foot-meta">In progress</span></div>
+    </div>
+    <div class="state-card soon">
+      <div class="sc-banner" style="background:linear-gradient(135deg,#080810,#100c18);"><span class="sc-flag">🎸</span><span class="sc-badge badge-soon">SOON</span></div>
+      <div class="sc-body"><div class="sc-name">Tennessee</div><div class="sc-sub">Nashville suburbs, Chattanooga, Knoxville — zero state income tax, rising livability.</div></div>
+      <div class="sc-foot"><span class="sc-foot-meta">In progress</span></div>
+    </div>
+  </div>
+
+  <div class="sec-hd" style="margin-top:8px;"><h2>How We Grade</h2></div>
+  <div class="method-grid">
+    <div class="method-card"><div class="method-icon">🏫</div><div class="method-title">Schools</div><div class="method-body">Niche A–F grades, district grad rates, state test scores.</div></div>
+    <div class="method-card"><div class="method-icon">🔒</div><div class="method-title">Crime</div><div class="method-body">SafeWise, FBI UCR, AreaVibes crime index, violent crime per 100K.</div></div>
+    <div class="method-card"><div class="method-icon">🏠</div><div class="method-title">Housing</div><div class="method-body">HUD Fair Market Rents, Redfin/Zillow median prices.</div></div>
+    <div class="method-card"><div class="method-icon">📊</div><div class="method-title">Livability</div><div class="method-body">AreaVibes composite (0–100) + Niche overall grades.</div></div>
+    <div class="method-card"><div class="method-icon">👥</div><div class="method-title">Demographics</div><div class="method-body">Census ACS 5-year estimates 2020–2024.</div></div>
+    <div class="method-card"><div class="method-icon">⭐</div><div class="method-title">QOL Grade</div><div class="method-body">Composite A+–D weighted for teacher + remote-worker household.</div></div>
+  </div>
+
+</div>
+
+<div class="hub-footer">
+  CityRelocator · Sources: Niche, AreaVibes, SafeWise, Census ACS, HUD FMR, Redfin, FBI UCR · May 2026
+</div>
+
+<!-- ADD STATE MODAL -->
+<div class="modal-overlay" id="add-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <div>
+        <div class="modal-title">Add a State</div>
+        <div class="modal-sub">Select a state — Claude researches &amp; builds the full page</div>
+      </div>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <input class="state-search" id="s-search" type="text" placeholder="Search states…" oninput="filterStates(this.value)">
+      <div class="states-list" id="s-list"></div>
+      <div class="progress-log" id="gen-log"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-secondary" onclick="closeModal()">Cancel</button>
+      <button class="btn-primary" id="gen-btn" disabled onclick="runGenerate()">Generate ✦</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const STATES=[
+  {n:'Alabama',f:'🌙'},{n:'Alaska',f:'🌌'},{n:'Arizona',f:'🌵'},{n:'Arkansas',f:'💎'},
+  {n:'California',f:'🌊'},{n:'Colorado',f:'⛰️'},{n:'Connecticut',f:'🌿'},{n:'Delaware',f:'🔵'},
+  {n:'Florida',f:'🌴'},{n:'Hawaii',f:'🌺'},{n:'Idaho',f:'🥔'},{n:'Illinois',f:'🏙️'},
+  {n:'Indiana',f:'🏎️'},{n:'Iowa',f:'🌽'},{n:'Kansas',f:'🌾'},{n:'Kentucky',f:'🐎'},
+  {n:'Louisiana',f:'🎺'},{n:'Maine',f:'🦞'},{n:'Maryland',f:'🦀'},{n:'Massachusetts',f:'🎓'},
+  {n:'Michigan',f:'🚗'},{n:'Minnesota',f:'❄️'},{n:'Mississippi',f:'🎸'},{n:'Missouri',f:'🌉'},
+  {n:'Montana',f:'🏔️'},{n:'Nebraska',f:'🌻'},{n:'Nevada',f:'🎰'},{n:'New Hampshire',f:'🍂'},
+  {n:'New Jersey',f:'🗽'},{n:'New Mexico',f:'🌶️'},{n:'New York',f:'🗺️'},{n:'North Carolina',f:'🌲'},
+  {n:'North Dakota',f:'🌅'},{n:'Ohio',f:'🔴'},{n:'Oklahoma',f:'🌪️'},{n:'Oregon',f:'🌲'},
+  {n:'Pennsylvania',f:'🔔'},{n:'Rhode Island',f:'⚓'},{n:'South Dakota',f:'🦅'},{n:'Tennessee',f:'🎸'},
+  {n:'Texas',f:'⭐'},{n:'Utah',f:'🏜️'},{n:'Vermont',f:'🍁'},{n:'Virginia',f:'🏛️'},
+  {n:'Washington',f:'☕'},{n:'West Virginia',f:'⛏️'},{n:'Wisconsin',f:'🧀'},{n:'Wyoming',f:'🦬'}
+];
+const added=new Set();
+let sel=null;
+
+function openAddModal(){
+  sel=null;
+  document.getElementById('gen-btn').disabled=true;
+  document.getElementById('gen-log').className='progress-log';
+  document.getElementById('gen-log').innerHTML='';
+  document.getElementById('s-search').value='';
+  renderList(avail());
+  document.getElementById('add-modal').classList.add('open');
+}
+function closeModal(){ document.getElementById('add-modal').classList.remove('open'); }
+function avail(){ return STATES.filter(s=>!added.has(s.n)); }
+function filterStates(q){ renderList(avail().filter(s=>s.n.toLowerCase().includes(q.toLowerCase()))); }
+function renderList(list){
+  document.getElementById('s-list').innerHTML=list.map(s=>`
+    <div class="state-option${sel&&sel.n===s.n?' selected':''}" onclick="pickState('${s.n}','${s.f}')">
+      <span style="font-size:18px;">${s.f}</span><span style="font-weight:500;">${s.n}</span>
+    </div>`).join('');
+}
+function pickState(n,f){
+  sel={n,f};
+  document.getElementById('gen-btn').disabled=false;
+  filterStates(document.getElementById('s-search').value);
+}
+function log(m,c=''){
+  const el=document.getElementById('gen-log');
+  el.classList.add('open');
+  el.innerHTML+=`<div class="log-line ${c}">${m}</div>`;
+  el.scrollTop=el.scrollHeight;
+}
+
+async function runGenerate(){
+  if(!sel)return;
+  const btn=document.getElementById('gen-btn');
+  btn.disabled=true; btn.innerHTML='<span class="spin">⟳</span> Researching…';
+  const {n,f}=sel;
+  log(`Starting ${f} ${n}…`,'info');
+  log('Querying counties, cities, rent, crime, schools, demographics…');
+  const prompt=`Generate a complete, self-contained HTML page for "${n}" following the CityRelocator format.
+Requirements:
+1. Link shared.css: <link rel="stylesheet" href="shared.css">
+2. Nav: <nav class="nav"><a href="index.html">🏠 Hub</a><span class="nav-sep">›</span><span class="nav-cur">${f} ${n}</span><div class="nav-right"><a href="index.html">← Back to Hub</a></div></nav>
+3. Top 4-5 best counties with .county-block > .county-header (.county-name, .county-grade, .county-tag) + .county-desc + .city-grid
+4. Each city: .city-card (.star or .caution) with .city-top (.city-name, .city-sub, .qol-grade, .qol-src), .badge-row, .stats (.stat-row with .sl/.sv/.pill), .demo-section (canvas 80x80 + .legend)
+5. Use grade color classes: .gAp .gA .gAm .gBp .gB .gC on both .county-grade and .qol-grade
+6. Full cross-comparison table (.section-title + .table-wrap > table)
+7. Synopsis (.syn-grid > .syn-card with .syn-title + .syn-body)
+8. Add-city section (.add-city-section) with input .add-city-input, button .btn-research, status div #city-status, grid #custom-grid
+9. .page-footer with links back to index.html
+10. Single <script> with drawPie function and all pie calls, plus submitCity() and addCityCard() that call Anthropic API
+drawPie: function drawPie(id,segs){const c=document.getElementById(id);if(!c)return;const ctx=c.getContext('2d');const cx=c.width/2,cy=c.height/2,r=Math.min(cx,cy)-3;let s=-Math.PI/2;segs.forEach(([p,col])=>{const a=(p/100)*2*Math.PI;ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,r,s,s+a);ctx.closePath();ctx.fillStyle=col;ctx.fill();s+=a;});ctx.beginPath();ctx.arc(cx,cy,r*.42,0,2*Math.PI);ctx.fillStyle='#06090f';ctx.fill();}
+Colors: White=#38b6f8, Black=#9b7aea, Hispanic=#f97316, Asian=#27c464, Other=#d1ddf0
+Use REAL 2024-2026 data for ${n}. Real Census ACS demographics. Return ONLY HTML starting with <!DOCTYPE html>.`;
+  try{
+    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:8000,messages:[{role:'user',content:prompt}]})});
+    if(!res.ok)throw new Error('API '+res.status);
+    const d=await res.json();
+    let html=(d.content?.[0]?.text||'').trim().replace(/^```html\s*/i,'').replace(/\s*```$/,'').trim();
+    if(!html.startsWith('<!'))throw new Error('Bad response');
+    log('✓ Built — opening…','ok');
+    added.add(n);
+    const url=URL.createObjectURL(new Blob([html],{type:'text/html'}));
+    injectCard(n,f,url);
+    const ct=2+added.size;
+    document.getElementById('live-ct').textContent=ct;
+    document.getElementById('ct-label').textContent=ct+' of 50 researched';
+    showToast('🎉 '+f+' '+n+' ready!','success');
+    setTimeout(closeModal,1200);
+  }catch(e){
+    log('✗ '+e.message,'err');
+    showToast('Failed: '+e.message,'error');
+    btn.disabled=false; btn.innerHTML='Generate ✦';
+  }
+}
+function injectCard(n,f,href){
+  const a=document.createElement('a');
+  a.className='state-card'; a.href=href; a.target='_blank'; a.rel='noopener';
+  a.innerHTML=`<div class="sc-banner" style="background:linear-gradient(135deg,#06090f,#0c1220);"><span class="sc-flag">${f}</span><span class="sc-badge badge-ai">AI GENERATED</span></div><div class="sc-body"><div class="sc-name">${n}</div><div class="sc-sub">AI-researched county &amp; city breakdown with demographics and pie charts.</div><div class="sc-stats"><div><div class="sc-num">✦</div><div class="sc-lbl">Generated</div></div></div><div class="sc-tags"><span class="sc-tag">AI Research</span><span class="sc-tag">Demographics</span></div></div><div class="sc-foot"><span class="sc-foot-meta">Generated today</span><span class="sc-open">Open ↗</span></div>`;
+  document.getElementById('ai-anchor').before(a);
+}
+function showToast(m,t){
+  const el=document.getElementById('toast');
+  el.textContent=m; el.className='show '+t;
+  setTimeout(()=>el.className='',3500);
+}
+renderList(avail());
+</script>
+</body>
+</html>
