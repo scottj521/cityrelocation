@@ -412,7 +412,7 @@ async function submitCity(){
   inp.value=''; btn.disabled=true; btn.textContent='⟳ Researching…';
   document.getElementById('city-status').textContent='Researching '+city+', Georgia…';
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:'Research "'+city+', Georgia" and return ONLY valid JSON (no markdown) with fields: city, county, population, qol_grade, qol_source, rent_2bed, median_home, crime (Very Low/Low/Moderate/Elevated/High), crime_color (green/yellow/red), schools, vibe, is_star (bool), is_caution (bool), badges:[{text,type}] (type=green/red/yellow/blue/purple), demographics:{white,black,hispanic,asian,other} (numbers summing ~100), demo_source. Use real Census ACS 2020-2024 data.'}]})});
+    const res=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,messages:[{role:'user',content:'Research "'+city+', Georgia" and return ONLY valid JSON (no markdown) with fields: city, county, population, qol_grade, qol_source, rent_2bed, median_home, crime (Very Low/Low/Moderate/Elevated/High), crime_color (green/yellow/red), schools, vibe, is_star (bool), is_caution (bool), badges:[{text,type}] (type=green/red/yellow/blue/purple), demographics:{white,black,hispanic,asian,other} (numbers summing ~100), demo_source. Use real Census ACS 2020-2024 data.'}]})});
     const d=await res.json();
     let raw=(d.content?.[0]?.text||'').trim().replace(/```json|```/g,'').trim();
     const m=raw.match(/\{[\s\S]*\}/); if(!m)throw new Error('No JSON');
